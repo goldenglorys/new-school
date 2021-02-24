@@ -1,0 +1,214 @@
+body{
+  margin:0;
+  margin-left: 18em;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 93vh;
+  font-family: candara;
+}
+
+
+.control{
+ width: 120px;
+ border-radius: 80%;
+ margin-top: 2.5em;
+ box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3;
+ -webkit-animation: mover 4s infinite  alternate;
+ animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+ 0% { transform: translateY(0); }
+ 100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); } 
+}
+
+
+
+.row{
+  padding: 10px
+}
+.card{
+  width: 67%;
+  height: 70vh;
+  box-shadow: 13px 13px 20px #c0ced1, 
+  13px 13px 20px #c0ced1,
+  13px 13px 20px #c0ced1;
+
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 67vh;
+}
+
+.caption{
+  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
+  width: 92%;
+  height: 67vh;
+  max-width: 100;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  justify-content: center;
+ } 
+
+.col-md-6 a button{
+ background: transparent;
+ border: 2px solid #fff;
+ /*position: absolute;*/
+ top: 70%;
+ /*left: 35%;*/
+}
+
+.control{
+ width: 120px;
+ border-radius: 80%;
+ margin-top: 2.5em;
+ box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3;
+ -webkit-animation: mover 4s infinite  alternate;
+ animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+ 0% { transform: translateY(0); }
+ 100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); } 
+}
+
+.col-md-6 form .Sub{
+  padding: 20px;
+  margin-top: 3.6em;
+}
+
+.col-md-6 form .Sub h2{
+  text-transform: uppercase;
+}
+  .text-center{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000000 ! important;
+  }
+
+
+.col-md-6 form .Sub .row100{
+  position: relative;
+  width: 100%;
+  display: grid;
+}
+.col-md-6 form .Sub .row100 .col{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 25px 0 7px;
+  transition: 0.5s;
+}
+
+.col-md-6 form .Sub .row100 .inputBox{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: black;
+}
+
+.col-md-6 form .Sub .row100 .inputBox input
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border:none;
+  outline: none;
+  font-size: 18px;
+  padding: -0 10px;
+  z-index: 1;
+  color: #f1f1f1;
+}
+
+.col-md-6 form .Sub .row100 .inputBox .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.col-md-6 form .Sub .row100 .inputBox input:focus + .text,
+.col-md-6 form .Sub .row100 .inputBox input:valid + .text{
+  top: -35px;
+  left: -10px;
+}
+.col-md-6 form .Sub .row100 .inputBox .line{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+ background: dodgerblue;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.col-md-6 form .Sub .row100 .inputBox input:focus ~ .line,
+.col-md-6 form .Sub .row100 .inputBox input:valid ~ .line{
+  height: 100%;
+}
+
+.col-md-6 form .Sub .row100 .inputBox .btn[type="submit"]{
+  background: dodgerblue;
+  color: #fff;
+  border: none;
+  max-width: 90px;
+  padding: 6px;
+  cursor: pointer;
+ }
+
+ @media (max-width: 1300px){
+  body{
+  margin:0;
+  margin-left: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 93vh;
+  font-family: candara;
+}
+
+.card{
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  box-shadow: 13px 13px 20px #c0ced1, 
+  13px 13px 20px #c0ced1,
+  13px 13px 20px #c0ced1;
+}
+
+/*.col-md-5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("../images/38.jpg");
+  height: 67vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 2em;
+ left: -12px;
+   width: 90%;*/
+}
+
+ }
+

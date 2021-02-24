@@ -1,0 +1,40 @@
+    body{
+      background-color: #1F2F3E;color: white
+    }
+
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    /*border: 0.5em solid white;*/
+  }
+
+  th, td {
+    text-align: left;
+    padding: 7px;
+  }
+
+      tr:nth-child(even){background-color: #3762;color: white}
+
+      .row{
+            margin-top: 2em
+
+      }
+      label
+      {
+        color: white;
+      }
+      
+
+     #one{
+      float: right;
+      background-color: red;
+      margin-top: 2em;
+      color: white;
+      height: 2em;
+      width: 40%;
+      border-radius: 2em;
+      padding-left: 2em;
+      padding-top: 0.5em;
+     }
+      

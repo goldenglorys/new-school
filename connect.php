@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>List of Students</title>
+    <title>Home</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -27,13 +27,24 @@
     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
+
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
-    
+    <script type="text/javascript" src="wowjs/wow.min.js"></script>
 
 
-      <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</head>
+<body>
+
+
+
+    <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
