@@ -4,6 +4,7 @@ include '../connect.php';
 require '../dbcon.php';
 if (isset($_POST["park"])) {
     $student_id=$_POST['student_id'];
+    $prev_img=$_POST['prev_img'];
     $surname = $_POST['surname'];
     $fname = $_POST['fname'];
     $mname = $_POST['mname'];
@@ -15,15 +16,23 @@ if (isset($_POST["park"])) {
     $filetouploadtype= $_FILES["pix"]["type"];
     $tmp = $_FILES["pix"]["tmp_name"];
     $pixmove = move_uploaded_file($tmp, $target_file);
-
+    if($filetoupload == '') $filetoupload = $prev_img;
     $update=mysqli_query($con,"UPDATE student SET surname='$surname',fname='$fname',mname='$mname',upload='$filetoupload' WHERE student_id='$student_id'");
             if ($update) {
-                header("location:update.php");
+                $select = mysqli_query($con,"SELECT * from student where student_id = '$id'");
+                    while ($row = mysqli_fetch_array($select)) {
+                        $_SESSION['upload'] = $row['upload'];
+                        $_SESSION['surname']=$row['surname']; 
+                        $_SESSION['fname']=$row['fname'];
+                        $_SESSION['regnumber']=$row['regnumber'];
+                        $_SESSION['mname']=$row['mname'];
+                    }
+                header("location:dashboard.php");
             }else{
                 echo mysqli_error($con);
             }
             }else{
-                $id = $_SESSION['student_id']     ;
+                $id = $_SESSION['student_id'];
                 $select = mysqli_query($con,"SELECT * from student where student_id = '$id'");
                 if ($select) {
                     while ($row = mysqli_fetch_array($select)) {
@@ -55,6 +64,7 @@ if (isset($_POST["park"])) {
         <div class="col-md-6">
         
             <input type="hidden" name="student_id" value=<?php echo $row['student_id'];?>>
+            <input type="hidden" name="prev_img" value=<?php echo $row['upload'];?>>
 
             <label>Surname</label>
               <input type="text" name="surname" class="form-control" value=<?php echo $row['surname'];?>> 

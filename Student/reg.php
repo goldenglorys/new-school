@@ -100,23 +100,24 @@ require 'connect.php';
                 <br>
 
                  <label for="class">Class</label>
-                  <select class="form-control" name="class">
+                  <select class="form-control" name="class" id="get_class" onchange="determineCourse(this)">
                   <option>Select Your Class</option>
-                  <option value="Jss 1">Jss 1</option>
-                  <option value="Jss 2">Jss 2</option>
-                  <option value="Jss 3">Jss 3</option>
-                  <option value="Sss 1">Sss 1</option>
-                  <option value="Sss 2">Sss 2</option>
-                  <option value="Sss 3">Sss 3</option>
+                  <option value="jss1">Jss 1</option>
+                  <option value="jss2">Jss 2</option>
+                  <option value="jss3">Jss 3</option>
+                  <option value="sss1">Sss 1</option>
+                  <option value="sss2">Sss 2</option>
+                  <option value="sss3">Sss 3</option>
                   </select><br>
-
+                  <div id="course">
                     <label for="course">Course</label>
                     <select class="form-control" name="course">
                     <option>Select Your Course</option>
                     <option value="Science">Science</option>
                     <option value="Art">Art</option>
                     <option value="Commercial">Commercial</option>
-                    </select><br>
+                    </select>
+                  </div><br>
 
                   <label for="address">Home Address</label>
                   <input type="text" placeholder="Home Address" name="address" required class="form-control" maxlength="15"/><br>
@@ -140,3 +141,14 @@ require 'connect.php';
       </div>
     </center>
 </div>
+
+<script type="text/javascript">
+  function determineCourse(arg){
+    let argValue = arg.value; 
+    if(argValue == 'jss1' || argValue == 'jss2' || argValue == 'jss3'){
+      document.getElementById('course').style.display = 'none';
+    } else {
+            document.getElementById('course').style.display = 'inline';
+    }
+  }
+</script>
