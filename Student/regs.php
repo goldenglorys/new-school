@@ -52,10 +52,13 @@ else {
 	echo mysqli_error($con);
 			
 			if ($save) {
-				 $_SESSION['regnumber']=$regnumber;
-				 echo "This is your Registration number  $regnumber ";
+				echo "<script>alert('This is your Registration number  $regnumber') </script>";
+				$_SESSION['regnumber']=$regnumber;
+			}
+			if(isset($_SESSION['regnumber'])){
+				echo "<script>alert('This is your Registration number  $regnumber') </script>";
 				header("location:login.php");
-				}
+			}
 
 			else{
 				header("location:reg.php");

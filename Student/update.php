@@ -7,25 +7,32 @@ if (isset($_POST["park"])) {
     $surname = $_POST['surname'];
     $fname = $_POST['fname'];
     $mname = $_POST['mname'];
-
+    $_SESSION['student_id'] = $_POST['student_id'];
     $filetoupload = $_FILES["pix"]["name"];
     $target_dir = "upload/";
     $target_file = $target_dir . $filetoupload;
     $filetouploadsize= $_FILES["pix"]["size"];
     $filetouploadtype= $_FILES["pix"]["type"];
     $tmp = $_FILES["pix"]["tmp_name"];
+    $pixmove = move_uploaded_file($tmp, $target_file);
 
-    $update=mysqli_query($con,"UPDATE student SET surname='$surname',fname='$fname',mname='$mname',upload='$upload' WHERE student_id='$student_id'");
+    $update=mysqli_query($con,"UPDATE student SET surname='$surname',fname='$fname',mname='$mname',upload='$filetoupload' WHERE student_id='$student_id'");
             if ($update) {
                 header("location:update.php");
             }else{
                 echo mysqli_error($con);
             }
             }else{
-                $student_id = $_GET['update'];
-                $select = mysqli_query($con,"select * from student where student_id= '$student_id'");
+                $id = $_SESSION['student_id']     ;
+                $select = mysqli_query($con,"SELECT * from student where student_id = '$id'");
                 if ($select) {
                     while ($row = mysqli_fetch_array($select)) {
+                        $_SESSION['upload'] = $row['upload'];
+                        $_SESSION['surname']=$row['surname']; 
+                        $_SESSION['fname']=$row['fname'];
+                        $_SESSION['regnumber']=$row['regnumber'];
+                        $_SESSION['mname']=$row['mname'];
+
     ?>
 
     <form action="update.php" method="post"  enctype="multipart/form-data">
@@ -39,7 +46,7 @@ if (isset($_POST["park"])) {
     <div class="col-md-6">
     
         <div>
-            <?php echo  "<img src='upload/".$_SESSION['upload']."' style='width:400px; height:400px; border-radius:100%'>"; ?>
+            <?php echo  "<img src='upload/".$row['upload']."' style='width:400px; height:400px; border-radius:100%'>"; ?>
         </div>
     <br><br>
         <input type="file" name="pix" value="Change Profile">
