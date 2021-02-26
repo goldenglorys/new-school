@@ -62,7 +62,7 @@ include '../dbcon.php';
 		<i class="fa fa-desktop"></i><span>Dashboard</span>
 	</a>
 
-	<a href="#" class="wow bounceIn" data-wow-duration="3s">
+	<a href="information.php" class="wow bounceIn" data-wow-duration="3s">
 		<i class="fa fa-info-circle"></i><span>Activities / Informations</span>
 	</a>
 
@@ -75,15 +75,15 @@ include '../dbcon.php';
 	</a>"
 	?>
 
-	<a href="subjectteacher.php" class="wow bounceIn" data-wow-duration="3s">
-		<i class="fa fa-users"></i><span>Subject Teachers</span>
+	<a href="subject.php" class="wow bounceIn" data-wow-duration="3s">
+		<i class="fa fa-users"></i><span>Subject</span>
 	</a>
 
-	<a href="#" class="wow bounceIn" data-wow-duration="3s">
+	<!-- <a href="#" class="wow bounceIn" data-wow-duration="3s">
 		<i class="fa fa-sliders-h"></i><span>Subjects</span>
-	</a>
+	</a> -->
 
-	<a href="#" class="wow bounceIn" data-wow-duration="3s">
+	<a href="timetable.php" class="wow bounceIn" data-wow-duration="3s">
 		<i class="fa fa-info-circle"></i><span>Time-Table</span>
 	</a>
 

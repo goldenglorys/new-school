@@ -1,0 +1,142 @@
+<li>Information/ noticeboard</li>
+- Title , Details, Sender name, Date and time.
+<style type="text/css">
+	.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+
+.container .box{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  color:#fff;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 30px;
+  transition: 0.5s;
+}
+.container .box:hover{
+  transform: translateY(-20px);
+}
+
+.container .box::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+
+.container .box::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+  filter: blur(30px);
+}
+
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after{
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.container .box:nth-child(3)::before,
+.container .box:nth-child(3)::after{
+  background: linear-gradient(45deg, #4dff03, #00d0ff);
+}
+
+.container .box span{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0,0,0,0.6);
+  z-index: 2; 
+}
+
+.container .box span::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: 20px 40px;
+}
+
+.container .box  .content{
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px
+}
+.container .box  .content h2{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+</style>
+
+  <div class="container">
+    <div class="box">
+      <span></span>
+      <div class="content">
+        <h2>Card One</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+     <div class="box">
+      <span></span>
+      <div class="content">
+        <h2>Card Two</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+     <div class="box">
+      <span></span>
+      <div class="content">
+        <h2>Card Three</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </div>

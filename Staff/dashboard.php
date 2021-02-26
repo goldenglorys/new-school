@@ -18,13 +18,23 @@ $fname=$_SESSION['fname'];
   <label for="check">
     <i class="fa fa-bars" id="sidebar_btn"></i>
   </label>
+
   <div class="left_area">
+    <img src="../images/p.png" class="logo">
     <h3>Staff <span> Dashboard</span></h3>
   </div>
 
   <div class="right_area">
+    <i class="fa fa-bell" style="color: white;" id="jj">
+      <sup style="background:#F2990D;">1</sup>
+    </i>
+
+    <i class="fa fa-envelope" style="color: white;">
+       <sup style="background:red;"> 3 </sup>
+    </i>
     <a href="#" class="logout_btn btn btn-primary">Logout</a>
   </div>
+
 </header>
 
 <div class="sidebar">
@@ -45,10 +55,14 @@ $fname=$_SESSION['fname'];
     </li>
 
     <li>
-        <a href="save.php"><i class="fa fa-edit"></i><span>Input Result</span></a>
+        <a href="information.php"><i class="fa fa-edit"></i><span>Activities </span></a>
     </li>
 
     <li>
+        <a href="save.php"><i class="fa fa-edit"></i><span>Input Result</span></a>
+    </li>
+
+<!--     <li>
       <div class="dropdown dropright">
       <button class="dropdown-toggle" data-toggle="dropdown">
           <span style="padding-right: 50px">Check Student</span>
@@ -63,6 +77,10 @@ $fname=$_SESSION['fname'];
 
         </div>
       </div>
+    </li> -->
+
+    <li>
+        <a href="messages.php"><i class="fa fa-envelope"></i><span>Messages</span></a>
     </li>
 
     <li>
@@ -78,7 +96,7 @@ $fname=$_SESSION['fname'];
         <i class='fa fa-user'></i><span>Profile</span>
       </a>"
       ?>
-      </li>
+      </li> 
 
     <li>
         <a href="#"><i class="fa fa-th"></i><span>Mark Attendance</span></a>
@@ -89,23 +107,88 @@ $fname=$_SESSION['fname'];
 
 
 
- 
-
-
-
-
-  <!--   <a href="#"><i class="fa fa-info-circle"></i><span>Check In</span></a>
-    <a href="#"><i class="fa fa-sliders-h"></i><span>Settings</span></a> -->
 </div>
 
 <div class="content">
-  <h2>Welcome Back</h2>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <!-- <h2>Welcome Back <?php echo "$fname";?></h2> -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style="border-bottom-right-radius: 8em;border-top-left-radius: 8em;">
+        <div class="row">
+          <div class="col-md-6">
+            <i class="fa fa-users fa-4x" style="padding:0.8em;color: white"></i>
+          </div>
+
+          <div class="col-md-6">
+            <h4>Total Number of Staffs</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-md-6">
+      <div class="card" style="border-bottom-left-radius: 8em;border-top-left-radius: 8em">
+        <div class="row">
+          <div class="col-md-6">
+            <i class="fa fa-graduation-cap fa-4x" style="padding:0.8em;background: transparent;color: #F39C13"></i>
+          </div>
+
+          <div class="col-md-6">
+            <h4>Total Number of Students</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-6">
+      <div class="card" style="border-bottom-left-radius: 8em;border-top-left-radius: 8em">
+        <div class="row">
+          <div class="col-md-6">
+            <i class="fa fa-book fa-4x" style="padding:0.8em;color: white"></i>
+          </div>
+
+          <div class="col-md-6">
+            <h4>Total Number of Subects</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-md-6">
+      <div class="card" style="border-bottom-left-radius: 8em;border-top-left-radius: 8em">
+        <div class="row">
+          <div class="col-md-6">
+            <i class="fa fa-envelope fa-4x" style="padding:0.8em;color: white"></i>
+          </div>
+
+          <div class="col-md-6">
+            <h4>Total Number of Messages</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    <label class="switch">
                       <input type="checkbox">
                       <span class="slider round" id="change"></span>
